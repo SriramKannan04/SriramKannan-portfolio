@@ -28,11 +28,13 @@ const skills = [
   { name: 'Python', level: 83 },
   { name: 'MySQL', level: 98 },
   { name: 'Microsoft SQL Server', level: 98 },
+  { name: 'PostgreSQL', level: 90 },
+  { name: 'Azure Devops', level: 20 },
 ];
 
 const achievements = [
-  { number: '9+', label: 'Projects' },
-  { number: '5+', label: 'Happy Clients' },
+  { number: '10+', label: 'Projects' },
+  { number: '6+', label: 'Happy Clients' },
   { number: '2', label: 'Years Exp' },
   { number: '97.5%', label: 'Success Rate' }
 ]
@@ -43,13 +45,43 @@ const features = [
   { icon: Workflow , title: 'Backend Development', description: 'Develop scalable server-side applications with robust architecture and database design.' },
 ];
 
-const dowloadResume = () => { 
-  const link = document.createElement("a");
-  link.href = "/assets/SriramKannan_Resume.pdf";
-  link.download = "SriramKannan_Resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+const dowloadResume = (domain: string) => {
+  if (domain === "react-dotnet") {
+    const link = document.createElement("a");
+    link.href = "/assets/SriramResume_React_DotNet.pdf";
+    link.download = "SriramKannan_React-DotNet_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  if (domain === "react-node") {
+    const link = document.createElement("a");
+    link.href = "/assets/SriramResume_ReactNodeJS.pdf";
+    link.download = "SriramKannan_React-NodeJS_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  if (domain === "angular-dotnet") {
+    const link = document.createElement("a");
+    link.href = "/assets/SriramResume_Angular_DotNet.pdf";
+    link.download = "SriramKannan_Angular-DotNet_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  if (domain === "react") {
+    const link = document.createElement("a");
+    link.href = "/assets/SriramResume_ReactDeveloper.pdf";
+    link.download = "SriramKannan_React-Developer_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
 }
 
 export default function Home() {
@@ -142,18 +174,31 @@ export default function Home() {
 
           <div>
             <span className="text-emerald-600 font-semibold text-sm tracking-wide">ABOUT ME</span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-4">
               Why hire me for your next project?
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              I'm a Full Stack Developer with 2 years of professional experience at ZGrow Solutions. I specialize in building responsive web applications using React, Next.js, and ASP.NET technologies. My expertise spans frontend design, backend API development, and database architecture.
+              I'm a Full Stack Developer with 2+ years of professional experience at ZGrow Solutions. I specialize in building responsive web applications using React, Next.js, and ASP.NET technologies. My expertise spans frontend design, backend API development, and database architecture.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               I believe in writing clean, maintainable code and creating intuitive user experiences. Every project I work on reflects my commitment to excellence, attention to detail, and collaborative problem-solving approach.
             </p>
-            <Button variant='contained' color='success' onClick={dowloadResume} style={{cursor:"pointer"}} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
-              Download CV
-            </Button>
+
+            <section className='flex gap-2 flex-col'>
+              <Button variant='contained' color='success' onClick={()=>dowloadResume("react-dotnet")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
+                Resume - React and .Net
+              </Button>
+              <Button variant='contained' color='success' onClick={()=>dowloadResume("react-node")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
+                Resume - React and Node.js
+              </Button>
+              <Button variant='contained' color='success' onClick={()=>dowloadResume("angular-dotnet")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
+                Resume - Angular and .Net
+              </Button>
+              <Button variant='contained' color='success' onClick={()=>dowloadResume("react")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
+                Resume - React Developer
+              </Button>
+            </section>
+            
           </div>
         </div>
       </section>
