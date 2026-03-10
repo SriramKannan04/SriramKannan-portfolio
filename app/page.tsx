@@ -178,7 +178,7 @@ export default function Home() {
               Why hire me for your next project?
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              I'm a Full Stack Developer with 2+ years of professional experience at ZGrow Solutions. I specialize in building responsive web applications using React, Next.js, and ASP.NET technologies. My expertise spans frontend design, backend API development, and database architecture.
+              I'm a Full Stack Developer with 2+ years of professional experience at ZGrow Solutions. I specialize in building responsive web applications using React, Next.js, Node.js and ASP.NET technologies. My expertise spans frontend design, backend API development, and database architecture.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               I believe in writing clean, maintainable code and creating intuitive user experiences. Every project I work on reflects my commitment to excellence, attention to detail, and collaborative problem-solving approach.
@@ -186,16 +186,28 @@ export default function Home() {
 
             <section className='flex gap-2 flex-col'>
               <Button variant='contained' color='success' onClick={()=>dowloadResume("react-dotnet")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
-                Resume - React and .Net
+                <div className='w-full flex justify-between items-center'>
+                  <p>Resume </p>
+                  <p>React and .Net</p>
+                </div>
               </Button>
               <Button variant='contained' color='success' onClick={()=>dowloadResume("react-node")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
-                Resume - React and Node.js
+                <div className='w-full flex justify-between items-center'>
+                  <p>Resume </p>
+                  <p>React and Node.js</p>
+                </div>
               </Button>
               <Button variant='contained' color='success' onClick={()=>dowloadResume("angular-dotnet")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
-                Resume - Angular and .Net
+                <div className='w-full flex justify-between items-center'>
+                  <p>Resume </p>
+                  <p>Angular and .Net</p>
+                </div>
               </Button>
               <Button variant='contained' color='success' onClick={()=>dowloadResume("react")} style={{ cursor: "pointer" }} className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg">
-                Resume - React Developer
+                <div className='w-full flex justify-between items-center'>
+                  <p>Resume </p>
+                  <p>React Developer</p>
+                </div>
               </Button>
             </section>
             
@@ -207,9 +219,9 @@ export default function Home() {
       <section id="features" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-emerald-600 font-semibold text-sm tracking-wide">MY SKILLS</span>
+            <span className="text-emerald-600 font-semibold text-sm tracking-wide">MY EXPERTISE</span>
             <h2 className="text-4xl font-bold text-gray-900 mt-4">
-              My Provided Features
+              Were am I best at?
             </h2>
           </div>
 
@@ -240,9 +252,9 @@ export default function Home() {
       <section id="expertise" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-emerald-600 font-semibold text-sm tracking-wide">SKILLS</span>
+            <span className="text-emerald-600 font-semibold text-sm tracking-wide">MY SKILLS</span>
             <h2 className="text-4xl font-bold text-gray-900 mt-4">
-              My Expertise
+              My Technical Knowledge
             </h2>
           </div>
 
@@ -296,7 +308,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-emerald-600 font-semibold text-sm tracking-wide">CAREER</span>
+            <span className="text-emerald-600 font-semibold text-sm tracking-wide">MY CAREER</span>
             <h2 className="text-4xl font-bold text-gray-900 mt-4">
               Work Experience
             </h2>
@@ -350,7 +362,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-emerald-600 font-semibold text-sm tracking-wide">EDUCATION</span>
+            <span className="text-emerald-600 font-semibold text-sm tracking-wide">MY EDUCATION</span>
             <h2 className="text-4xl font-bold text-gray-900 mt-4">
               Academic Background
             </h2>
@@ -395,7 +407,7 @@ export default function Home() {
       <section id="contact" className="py-20 bg-gradient-to-br from-emerald-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-emerald-600 font-semibold text-sm tracking-wide">CONTACT</span>
+            <span className="text-emerald-600 font-semibold text-sm tracking-wide">CONTACT ME</span>
             <h2 className="text-4xl font-bold text-gray-900 mt-4">
               Let's Get in Touch
             </h2>
@@ -440,7 +452,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-5">
         <div className="max-w-7xl mx-auto px-6 text-center">         
-          <p className="mb-4">© 2025 Sriram Kannan. All rights reserved.</p>
+          <p className="mb-4 text-sm">Copyright © 2025 by Sriram Kannan All rights reserved</p>
         </div>
       </footer>
     </div>
